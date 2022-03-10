@@ -1,5 +1,12 @@
 
-
+var getPlayerName = function(){
+  var name = "";
+  while ( name === "" || name === null){
+    name = prompt("What is your robots name?");
+  }
+  console.log("Your robot's name is " + name);
+  return name;
+}
 
 
 
@@ -160,7 +167,7 @@ var endGame = function(){
 
 // created an object to hold player info// ask for name and set stats
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
@@ -209,7 +216,6 @@ var playerInfo = {
       attack: randomNumber(10, 14)
     }
   ];
-
 
 
 
